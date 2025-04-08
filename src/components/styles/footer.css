@@ -1,0 +1,151 @@
+.footer {
+    background-color: #29017a;
+    color: #ffffff;
+    padding: 40px 0;
+    position: relative;
+    width: 100%;
+    height: 400px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0 auto;
+    gap: 40px;
+    padding: 0 60px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    width: 30%;
+}
+
+.footer-section h2 {
+    font-size: 32px;
+    margin-bottom: 18px;
+    font-weight: 500;
+}
+
+.footer-section p,
+.footer-section ul,
+.footer-section a {
+    font-size: 19px;
+    line-height: 1.6;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-section ul li a:hover {
+    color: #F704D5;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 12px 20px;
+    background-color: #ffffff;
+    margin-top: 60px;
+    color: #29017a;
+    font-weight: 600;
+}
+@media screen and (max-width: 1024px){
+    .footer-content {
+        /* flex-direction: column; */
+        align-items: center;
+        /* text-align: center; */
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-section ul {
+        padding: 0;
+    }
+
+    .footer-section h2 {
+        font-size: 23px;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 15px;
+    }
+}
+/* Tablet View (768px and below) */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        /* flex-direction: column; */
+        align-items: center;
+        /* text-align: center; */
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .footer-section ul {
+        padding: 0;
+    }
+
+    .footer-section h2 {
+        font-size: 20px;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media screen and (max-width: 480px) {
+    .footer {
+        padding: 20px 0;
+        height: auto;
+    }
+    .links{
+        display: none;
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-section h2 {
+        font-size: 18px;
+    }
+
+    .footer-section p,
+    .footer-section ul li a {
+        font-size: 12px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+        padding: 10px 15px;
+    }
+}

@@ -1,0 +1,918 @@
+.firstpage{
+  background-color: white;
+  height: 100vh;
+  width: 100%;
+}
+.scrolling-navbar {
+  width: 100%;
+  /* background: #2A2D2E ; */
+  /* overflow: hidden; */
+  /* white-space: nowrap; */
+  padding: 15px 0;
+  position: relative;
+  /* border-bottom: 1px solid #5E16EB; */
+}
+
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  /* white-space: nowrap; */
+  /* animation: scroll 10s linear infinite; */
+  gap: 19px !important;
+}
+
+.menu a {
+  color: #29017a;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 17px;
+  margin: 0 18px;
+  display: inline-block;
+  position: relative;
+}
+/* tooltip.css */
+.custom-tooltip {
+max-width: 400px;
+white-space: normal;
+word-wrap: break-word;
+padding: 10px;
+z-index: 1000;
+}
+
+
+/* @keyframes scroll {
+  from {
+      transform: translateX(0);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+} */
+
+.textbox{
+  width: 80%;
+  height: auto;
+  margin-top: 0px;
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content:center;
+  gap: 20px;
+}
+.textbox h4{
+  font-size: 25px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: #29017a;
+}
+.textbox h1{
+  font-size: 55px;
+  font-weight: 500;
+color: black !important;
+
+  /* animation-delay: 0.8s; */
+}
+.textbox p{
+  font-size: 18px;
+  color: rgb(49, 49, 49);  
+  /* animation-delay: 2s; */
+}
+.textbox button{
+  padding: 20px 70px;
+  background-color: #29017a ;
+  border: 2px solid #29017a;
+  border-radius: 50px;
+  margin-top: 40px;
+  border-bottom-right-radius: 2px;
+  transition: all 0.3s;
+}
+.textbox button:hover{
+  background-color: white;
+  border: 2px solid #29017a;
+}
+.textbox button:hover .btnlink{
+  color: #29017a;
+  font-weight: 600;
+}
+.textbox .btnlink{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.textbox h1,
+.textbox h4 {
+animation: slideInFromLeft 2s ease-in-out forwards;
+}
+.textbox p{
+animation: slideInFromLeft 2s ease-in-out forwards;
+
+}
+@keyframes popUp {
+0% {
+  transform: scale(0);
+  opacity: 0;
+}
+80% {
+  transform: scale(1.1);
+  opacity: 1;
+}
+100% {
+  transform: scale(1);
+}
+}
+
+.popup {
+animation: popUp 0.2s ease-in-out;
+}
+
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+/* gif */
+
+.gif1 {
+  height: 500px;
+  width: 50%;
+  /* background-color: #1f1e1e; */
+  position: absolute;
+  right: 0;
+  top: 650px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.gif1 img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  animation: pulse 3s infinite alternate ease-in-out;
+}
+
+/* Pulse Animation - Slight Zoom In & Out */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+  }
+  100% {
+      transform: scale(1.06);
+  }
+}
+
+.colorbox{
+  width: 100%;
+  height: 460px;
+  background-color: #29017a;
+  position: absolute;
+  top: 890px;
+  z-index: -1;
+}
+
+/* /textbox 2 */
+.textbox2 {
+  width: 380px;
+  position: absolute;
+  top: 950px;
+  left: 100px;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.textbox2 h2 {
+  cursor: pointer;
+  color: #ffffff;
+  padding: 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+
+
+.content-box {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, height 0.5s ease-in-out;
+}
+
+.show {
+  height: auto; 
+  opacity: 1;
+}
+
+.top-bar,
+.bottom-bar {
+  position: absolute;
+  height: 2px;
+  background:#ffffff;
+  width: 0%;
+}
+
+.top-bar {
+  top: 0;
+  left: 0;
+}
+
+.bottom-bar {
+  bottom: 0;
+  right: 0;
+}
+
+.show .top-bar {
+  animation: expand-left-to-right 3s forwards;
+}
+
+.show .bottom-bar {
+  animation: expand-right-to-left 3s forwards;
+}
+.content {
+  color: rgb(195, 192, 192);
+  padding: 10px;
+  font-size: 16px;
+  margin-top: 5px;
+  border-radius: 5px;
+  animation: fade-in 0.5s ease-in-out;
+}
+
+/* Keyframes for Animations */
+@keyframes expand-left-to-right {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes  expand-right-to-left {
+  from {
+      width: 0%;
+    }
+    to {
+      width: 100%;
+    }
+}
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* slider box */
+
+
+.sliderbox{
+  width: 100%;
+  height: 400px;
+  position: absolute;
+  top: 1480px;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  gap: 70px;
+  padding: 0px 80px;
+  /* border-bottom: 2px solid #29017a; */
+
+}
+.sliderbox .slider{
+width: 48%; 
+height: 400px;
+background-color: white;
+}
+.slider img{
+width: 100%;
+height: 100%;
+object-fit:cover;
+background-position: center; 
+
+}
+.sliderbox .slidertext{
+width: 50%;
+text-align: end;
+
+}
+.slidertext h1{
+font-size: 43px;
+font-weight: 400;
+text-transform: capitalize;
+color: black !important;
+
+}
+.textbox3{
+width: 100%;
+height: 400px;
+position: absolute;
+top: 2000px;
+display: flex;
+align-items: center;
+justify-content: space-evenly;
+gap: 30px;
+padding: 30px;
+}
+.textbox3 h1{
+  width: 70%;
+  font-size:45px;
+  font-weight: 400;
+  text-transform: capitalize;
+color: black !important;
+
+}
+.textbox3 .button-pulse{
+  padding: 20px 70px;
+  background-color: #29017a ;
+  border: 2px solid #29017a;
+  border-radius: 50px;
+  margin-top: 50px;
+  border-bottom-right-radius: 2px;
+  /* animation: pulse 1s infinite; */
+}
+.textbox3 .btnlink{
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+}
+.textbox3 .button-pulse:hover{
+  background-color: white;
+  border: 2px solid #29017a;
+}
+.textbox3 .button-pulse:hover .btnlink{
+  color: #29017a;
+  font-weight: 600;
+}
+@keyframes pulse {
+0% {
+  transform: scale(1);
+}
+50% {
+  transform: scale(1.4);
+}
+100% {
+  transform: scale(1);
+}
+}
+
+.button-pulse {
+animation: pulse 2s infinite;
+}
+.firstpage-footer{
+background-color: #29017a;
+color: #ffffff;
+padding: 40px 0;
+position: relative;
+width: 100%;
+height: 400px;
+top: 1700px;
+}
+.firstpage-footer .footer-content{
+display: flex;
+gap: 350px;
+}
+.firstpage-footer h2{
+font-size: 30px !important;
+}
+.firstpage-footer p{
+font-size: 16px !important;
+}
+
+
+
+    
+/* Default (Light Theme) */
+body {
+  background-color: #ffffff;
+  color: #000000;
+  /* transition: background-color 2s ease, color 2s ease !important; */
+}
+
+/* Dark Theme */
+body[data-theme="dark"], body[data-theme="dark"] .textbox, body[data-theme="dark"] .firstpage {
+  background-color: #1f1f1f;  /* Dark background */
+  color: #ffffff ;  /* Light text */
+}
+body[data-theme="dark"] .menu a{
+  color: white !important;
+}
+body[data-theme="dark"] .textbox h1{
+  color: white !important;
+}
+body[data-theme="dark"] .textbox h4{
+  color: rgb(188, 188, 188) !important;
+}
+body[data-theme="dark"] .textbox p{
+  color: rgb(198, 198, 198) !important;
+}
+body[data-theme="dark"] .slidertext h1{
+  color: rgb(198, 198, 198) !important;
+}
+body[data-theme="dark"] .textbox3 h1{
+  color: rgb(198, 198, 198) !important;
+}
+
+/* 🔘 Theme Toggle Button */
+.theme-toggle-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  font-size: 30px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(45deg, #9e9b9b, #322525);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  animation: jump 2s infinite ease-in-out;
+  z-index: 10000;
+}
+
+/* 🌙 Dark Mode Button */
+body[data-theme="dark"] .theme-toggle-btn {
+  color: #ffcc00;
+  animation: jump 3s infinite ease-in-out;
+  background: linear-gradient(45deg, #ffcc00, #ff6600);
+
+}
+
+/* Hover Effect */
+.theme-toggle-btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Click Effect */
+.theme-toggle-btn:active {
+  transform: scale(0.9);
+}
+
+/* 🔥 Jumping Animation */
+@keyframes jump {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+
+
+
+/* media queries */
+
+
+/* Medium Screens (Laptops & Tablets) */
+@media screen and (max-width: 1025px) {
+ 
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.firstpage{
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+/* .textbox, .gif1, .colorbox, .textbox2, .sliderbox {
+max-width: 100%;
+overflow: hidden;
+} */
+.scrolling-navbar {
+width: 100%;
+/* background-color: rgb(168, 238, 238); */
+overflow: hidden; /* Ensures no extra space */
+}
+
+.menu {
+display: flex;
+height: 28px;
+flex-wrap: nowrap; /* Prevent items from wrapping */
+overflow-x: auto; /* Enables horizontal scrolling */
+overflow-y: hidden;
+white-space: nowrap; /* Prevents text from wrapping */
+max-width: 100%;
+scrollbar-width: 0px;
+}
+
+.menu a {
+font-size: 15px;
+padding: 5px 3px; /* Ensures spacing */
+display: inline-block;
+text-decoration: none;
+white-space: nowrap; /* Prevents breaking into multiple lines */
+}
+.menu::-webkit-scrollbar {
+display: none;
+}
+.textbox {
+    width: 85%;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 0 auto;
+}
+.textbox h4{
+  font-size: 25px;
+}
+.textbox h1 {
+    font-size: 32px;
+}
+.textbox p {
+    font-size: 15px;
+    width: 85%;
+}
+.textbox button{
+  padding: 15px 45px;
+  margin-top: 20px;
+}
+.textbox .btnlink{
+  font-size: 14px;
+}
+.gif1 {
+ /* top: 520px; */
+ display: none;
+}
+.colorbox {
+    height: 350px;
+    top: 600px;
+    background-color: #29017a;
+    z-index: 1111;
+}
+.textbox2 {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  text-align: center;
+    width: 95%;
+    padding: 10px 30px;
+    left: 0;
+    top: 620px;
+    z-index: 1111;
+    background-color: transparent;
+}
+.textbox2 h2{
+  font-size: 16px;
+}
+.content{
+  font-size: 12px;
+}
+.sliderbox {
+    flex-direction: column;
+    padding: 10px;
+    top: 990px;
+}
+.sliderbox .slider{
+  width: 60%;
+}
+.sliderbox .slidertext{
+  width: 90%;
+  height: auto;
+}
+.slidertext h1{
+  font-size: 29px;
+}
+.textbox3{
+  flex-direction: column;
+  top: 1590px;
+  text-align: left;
+  align-items: start;
+}
+.textbox3 h1{
+  padding: 0 30px;
+  font-size: 28px;
+}
+.textbox3 .btnlink{
+  font-size: 14px;
+}
+.textbox3 .button-pulse{
+  padding: 20px 55px;
+  position: absolute;
+  right: 50px;
+  top: 320px;
+  margin-top: -50px;
+}
+.firstpage-footer {
+  flex-direction: column;
+  text-align: center;
+  top: 1700px;
+}
+.firstpage-footer .footer-section {
+  padding: 10px;
+}
+}
+
+/* Small Screens (Tablets & Large Phones) */
+@media screen and (max-width: 769px) {
+
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.firstpage{
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+/* .textbox, .gif1, .colorbox, .textbox2, .sliderbox {
+max-width: 100%;
+overflow: hidden;
+} */
+.scrolling-navbar {
+width: 100%;
+/* background-color: rgb(168, 238, 238); */
+overflow: hidden; /* Ensures no extra space */
+}
+
+.menu {
+display: flex;
+height: auto;
+flex-wrap: nowrap; /* Prevent items from wrapping */
+overflow-x: auto; /* Enables horizontal scrolling */
+overflow-y: hidden;
+white-space: nowrap; /* Prevents text from wrapping */
+max-width: 100%;
+scrollbar-width: 0px;
+}
+
+.menu a {
+font-size: 14px;
+padding: 5px 3px; /* Ensures spacing */
+display: inline-block;
+text-decoration: none;
+white-space: nowrap; /* Prevents breaking into multiple lines */
+}
+.menu::-webkit-scrollbar {
+display: none;
+}
+
+.textbox {
+    width: 95%;
+    padding: 20px;
+    text-align: center;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.textbox h4{
+  font-size: 20px;
+}
+.textbox h1 {
+    font-size: 25px;
+}
+.textbox p {
+    font-size: 15px;
+}
+.textbox button{
+  padding: 15px 40px;
+  margin-top: 20px;
+}
+.textbox .btnlink{
+  font-size: 14px;
+}
+.gif1{
+ display: none;
+}
+.colorbox {
+    height: 300px;
+    top: 600px;
+    background-color: #29017a;
+    z-index: 1111;
+}
+.textbox2 {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+  text-align: center;
+    width: 100%;
+    padding: 10px 30px;
+    left: 0;
+    top: 620px;
+    background-color: transparent;
+    /* z-index: 1111; */
+}
+.textbox2 h2{
+  font-size: 16px;
+}
+.content{
+  font-size: 12px;
+}
+.sliderbox {
+    flex-direction: column;
+    padding: 10px;
+    top: 970px;
+}
+.sliderbox .slider{
+  width: 80%;
+}
+.sliderbox .slidertext{
+  width: 90%;
+  height: auto;
+}
+.slidertext h1{
+  font-size: 27px;
+}
+.textbox3{
+  flex-direction: column;
+  top: 1590px;
+  text-align: left;
+  align-items: start;
+}
+.textbox3 h1{
+  font-size: 26px;
+  width: 70%;
+  padding: 0 30px;
+}
+.textbox3 .btnlink{
+  font-size: 14px;
+}
+.textbox3 .button-pulse{
+  padding: 15px 50px;
+  /* margin-left: 20px; */
+  margin-top: -65px;
+}
+.firstpage-footer {
+  flex-direction: column;
+  text-align: center;
+  top: 1700px;
+}
+.firstpage-footer .footer-section {
+  padding: 10px;
+}
+}
+
+/* Extra Small Screens (Mobile Phones) */
+@media screen and (max-width: 480px) {
+body, html {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.firstpage{
+margin: 0;
+padding: 0;
+overflow: hidden;
+}
+
+.scrolling-navbar {
+width: 100%;
+/* background-color: rgb(168, 238, 238); */
+overflow: hidden; /* Ensures no extra space */
+margin-top: 70px;
+}
+
+.menu {
+display: flex;
+height: 25px;
+flex-wrap: nowrap; /* Prevent items from wrapping */
+overflow-x: auto; /* Enables horizontal scrolling */
+overflow-y: hidden;
+white-space: nowrap; /* Prevents text from wrapping */
+max-width: 100%;
+scrollbar-width: 0px;
+}
+
+.menu a {
+font-size: 14px;
+padding: 5px 3px; /* Ensures spacing */
+display: inline-block;
+text-decoration: none;
+white-space: nowrap; /* Prevents breaking into multiple lines */
+}
+.custom-tooltip{
+  width: 200px;
+  height: auto;
+}
+
+.textbox {
+    width: 95%;
+    padding: 15px;
+    text-align: center;
+    overflow-x:hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    
+}
+.textbox h4{
+  font-size: 20px;
+}
+.textbox h1 {
+    font-size: 22px;
+}
+.textbox p {
+    font-size: 12px;
+}
+.textbox button{
+  padding: 10px 30px;
+  margin-top: 20px;
+}
+.textbox .btnlink{
+  font-size: 14px;
+}
+.gif1 {
+ display: none;
+}
+.colorbox {
+    height: 300px;
+    top: 600px;
+    background-color: #29017a;
+    z-index: 1111;
+}
+.textbox2 {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    top: 620px;
+    background-color: transparent;
+    z-index: 1111;
+}
+.textbox2 h2{
+  font-size: 14px;
+}
+.content{
+  font-size: 10px;
+}
+.sliderbox {
+    flex-direction: column;
+    padding: 10px;
+    top: 950px;
+}
+.sliderbox .slider{
+  width: 90%;
+}
+.sliderbox .slidertext{
+  width: 90%;
+  height: auto;
+}
+.slidertext h1{
+  font-size: 20px;
+}
+.textbox3{
+  flex-direction: column;
+  top: 1460px;
+  text-align: left;
+  align-items: start;
+}
+.textbox3 h1{
+  width: 90%;
+  font-size: 22px;
+}
+.textbox3 .btnlink{
+  font-size: 14px;
+}
+.textbox3 .button-pulse{
+  padding: 10px 40px;
+  /* margin-left: 160px; */
+  margin-top: -50px;
+  top: 420px;
+}
+.firstpage-footer {
+  flex-direction: column;
+  text-align: center;
+  top: 1700px;
+}
+.firstpage-footer .footer-section {
+  padding: 10px;
+}
+}
