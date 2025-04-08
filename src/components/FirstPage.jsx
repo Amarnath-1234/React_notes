@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react'
 import { Link} from 'react-router-dom'
 import "./firstpage.css"
 // import {motion, AnimatePresence } from 'framer-motion';
-import useFirstPageHook from './customHooks/FirstPageHook';
+// import useFirstPageHook from './customHooks/FirstPageHook';
 import {Tooltip} from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-// import Carousel from 'react-multi-carousel';
+import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 
@@ -52,10 +52,10 @@ const FirstPage = () => {
     { id: 3, title: 'React Components', content: 'Components are the building blocks of a React application. They can be class-based or functional and allow you to split the UI into independent, reusable pieces.' },
   ];
 
-  useFirstPageHook(() => {
-    setActiveId(headings[currentIndex].id);
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % headings.length);
-  }, 4000);
+  // useFirstPageHook(() => {
+  //   setActiveId(headings[currentIndex].id);
+  //   setCurrentIndex((prevIndex) => (prevIndex + 1) % headings.length);
+  // }, 4000);
 
 
   const images = [
@@ -217,7 +217,7 @@ const FirstPage = () => {
         </div>
         <div className="sliderbox">
         <div className="slider">
-        {/* <Carousel
+        <Carousel
         responsive={responsive}
         infinite={true}
         autoPlay={true}
@@ -234,7 +234,7 @@ const FirstPage = () => {
             <img src={image.image} alt={`Slide ${index}`} />
           </div>
         ))}
-      </Carousel> */}
+      </Carousel>
     </div>
         <div className="slidertext">
         <h1> React's modular approach to UI development, performance, scalability, and adaptability has quickly become a go-to choice for web development.</h1>
