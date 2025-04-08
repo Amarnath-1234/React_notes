@@ -5,7 +5,7 @@ import "./firstpage.css"
 import useFirstPageHook from './customHooks/FirstPageHook';
 import {Tooltip} from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css';
-import Carousel from 'react-multi-carousel';
+// import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
 
@@ -217,7 +217,7 @@ const FirstPage = () => {
         </div>
         <div className="sliderbox">
         <div className="slider">
-        <Carousel
+        {/* <Carousel
         responsive={responsive}
         infinite={true}
         autoPlay={true}
@@ -234,7 +234,7 @@ const FirstPage = () => {
             <img src={image.image} alt={`Slide ${index}`} />
           </div>
         ))}
-      </Carousel>
+      </Carousel> */}
     </div>
         <div className="slidertext">
         <h1> React's modular approach to UI development, performance, scalability, and adaptability has quickly become a go-to choice for web development.</h1>
